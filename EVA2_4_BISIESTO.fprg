@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="invitado"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-11 05:52:15 p. m."/>
+        <attribute name="created" value="aW52aXRhZG87TEFCMDIwNDE4OzIwMjMtMTAtMTE7MDU6MDM6MDUgcC4gbS47MjgyNw=="/>
+        <attribute name="edited" value="aW52aXRhZG87TEFCMDIwNDE4OzIwMjMtMTAtMTE7MDU6NTI6MTUgcC4gbS47MTsyOTQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <declare name="residuo" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#191;Que a&#241;o quieres saber si es bisiesto?&quot;" newline="True"/>
+            <input variable="year"/>
+            <assign variable="residuo" expression="year % 4"/>
+            <if expression="residuo = 0">
+                <then>
+                    <assign variable="residuo" expression="year % 100"/>
+                    <if expression="residuo = 0">
+                        <then>
+                            <assign variable="residuo" expression="year % 400"/>
+                            <if expression="residuo = 0">
+                                <then>
+                                    <output expression="&quot;TU A&#209;O ES BISIESTO&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;TU A&#209;O NO ES BISIESTO&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;TU A&#209;O ES BISIESTO&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;NO ES A&#209;O BISIESTO&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
